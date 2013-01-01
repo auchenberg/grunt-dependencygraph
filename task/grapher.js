@@ -48,12 +48,6 @@ module.exports = function(grunt) {
       var size = 0;
       var color = '';
 
-      // Make "bundles bigger"
-      if(component.indexOf('bundles') > -1) {
-        color = "#b94431";
-        size = 4;
-      }
-
       return {
         size: size,
         color: color,

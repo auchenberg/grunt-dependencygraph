@@ -1,5 +1,5 @@
   body {
-    background: #000;
+    background: #fff;
     padding:0;
     margin:0;
     font-family:helvetica,arial;
@@ -14,7 +14,6 @@
     fill: #000;
     overflow: hidden;
     position: relative;
-    user-select: none;
   }
 
   .control-zoom {
@@ -49,12 +48,4 @@
   .control-zoom > .control-zoom-out {
     background-image: url(/lib/zoom-out.png);
     margin-bottom: 5px;
-  }
-
-  line {
-    stroke: #666;
-  }
-
-  node {
-    stroke-width: 1.5px;
   }
