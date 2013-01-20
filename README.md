@@ -1,7 +1,7 @@
 grunt-dependencygraph
 ===========
 
-Visualize your CommonJS or AMD module dependencies.
+Visualize your CommonJS or AMD module dependencies in a force directed graph using D3.js.
 
 Installation
 -------------
@@ -33,4 +33,6 @@ Then add some configuration for the plugin like so:
         ...
     });
 
-Then just run `grunt dependencygraph` and enjoy!
+Then just run `grunt dependencygraph` and open `index.html`. in your `outputPath`-folder
+
+Enjoy.
