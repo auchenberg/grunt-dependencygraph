@@ -1,4 +1,4 @@
-amd-grapher
+dependencyGraph.js
 ===========
 
-amd-grapher
+Visualize your CommonJS or AMD module dependencies.

@@ -1,0 +1,34 @@
+{
+  "name": "dependencygraph.js",
+  "version": "0.1.0",
+  "author": "Kenneth Auchecnberg <kenneth@auchenberg.dk>",
+  "repository": "https://github.com/auchenberg/dependencyGraph.js.git",
+  "homepage": "https://github.com/auchenberg/dependencyGraph.js.git",
+  "licenses": [
+  {
+    "type": "MIT"
+  }
+  ],
+  "description": "Visualize your CommonJS or AMD module dependencies.",
+  "keywords": [
+    "AMD",
+    "RequireJS",
+    "require",
+    "module",
+    "circular",
+    "dependency",
+    "dependencies",
+    "graph",
+    "visualize",
+    "D3"
+  ],
+  "engines": [
+    "node >= 0.8.0"
+  ],
+  "dependencies": {
+    "madge": "0.1.4"
+  },
+  "devDependencies": {
+    "jshint": "0.9.1"
+  }
+}
