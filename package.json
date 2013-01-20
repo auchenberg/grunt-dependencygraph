@@ -1,9 +1,9 @@
 {
-  "name": "dependencygraph.js",
+  "name": "grunt-dependencygraph",
   "version": "0.1.0",
   "author": "Kenneth Auchecnberg <kenneth@auchenberg.dk>",
-  "repository": "https://github.com/auchenberg/dependencyGraph.js.git",
-  "homepage": "https://github.com/auchenberg/dependencyGraph.js.git",
+  "repository": "https://github.com/auchenberg/grunt-dependencygraph.git",
+  "homepage": "https://github.com/auchenberg/grunt-dependencygraph.git",
   "licenses": [
   {
     "type": "MIT"
