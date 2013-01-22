@@ -10,6 +10,7 @@
 module.exports = function(grunt) {
 
   var config = this.config.get('dependencygraph');
+
   var _ = grunt.utils._;
   var log = grunt.log;
 
@@ -39,7 +40,7 @@ module.exports = function(grunt) {
 
     var madge = require('madge');
     var res = madge(config.targetPath, {
-      format: config.format
+      format : config.format
     });
 
     log.writeln("Extracted dependencies. Check");
@@ -49,11 +50,6 @@ module.exports = function(grunt) {
   }
 
   function generateGraphOutput(dependencies) {
-    // Require libraries.
-    var fs = require("fs");
-    var path = require("path");
-
-    var dataFileName = 'data.json';
 
     // Read data
     var components = _.uniq(_.flatten(_.map(dependencies, function(values, item) {
@@ -80,8 +76,8 @@ module.exports = function(grunt) {
         var targetIndex = _.indexOf(components, component);
 
         var link = {
-          source:  _.indexOf(components, component),
-          target:  _.indexOf(components, dependency),
+          source: _.indexOf(components, component),
+          target: _.indexOf(components, dependency),
         };
 
         if(sourceIndex > -1 && targetIndex > -1) {
@@ -91,11 +87,11 @@ module.exports = function(grunt) {
     });
 
     var graph = {
-      "directed"    : true,
-      "multigraph"  : false,
-      "graph"       : [],
-      "nodes"       : nodes,
-      "links"       : links
+      "directed" : true,
+      "multigraph" : false,
+      "graph" : [],
+      "nodes" : nodes,
+      "links" : links
     }
 
     return graph;
@@ -110,8 +106,8 @@ module.exports = function(grunt) {
 
     var html = grunt.template.process(template, {
       css : css,
-      js  : js,
-      title: 'dependencyGraph',
+      js : js,
+      title : 'dependencyGraph',
       graphData: JSON.stringify(graphData, null)
     })
 
