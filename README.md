@@ -35,3 +35,24 @@ Then just run `grunt dependencygraph`, go to your `outputPath`-folder, and open 
 
 Enjoy.
 
+Options
+-------
+grunt-dependencygraph supports a few options.
+
+```text                 
+targetPath              Path for the target source to extract dependencies (supports absolute/relative paths)
+outputPath              Path for where to output the graph (supports absolute/relative paths)
+format                  Dependency-format to parse, either cjs (common-js), or amd
+exclude                 A regular expression for excluding modules
+```
+
+TODO
+-------
+grunt-dependencygraph is still very much in progress, so here is the todo-list:
+
+- Proper label positioning: Avoid label collisions and make the graph more readable.
+- Arrows on lines between nodes.
+- Better highlighting of dependencies when hovering nodes.
+
+
+
