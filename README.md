@@ -17,8 +17,8 @@ Then add some configuration for the plugin like so:
     grunt.initConfig({
         ...
         dependencygraph: {
-          targetPath: '<project path>',
-          outputPath: './graph/',
+          targetPath: './app/assets/javascript',
+          outputPath: './public/graph',
           format: 'amd' // 'amd' or 'cjs'
         },
         ...
