@@ -32,13 +32,14 @@ module.exports = function(grunt) {
     // Fail task if errors were logged
     if (grunt.errors) { return false; }
 
-    log.writeln("Generated graph into " + config.outputPath + " - Check.");
-    log.ok();
-    log.writeln("Booya.");
+    log.writeln("Booya. I'm out of here. Bye.");
 
   });
 
   function findDependencies() {
+
+    var isPathAbsolute = grunt.file.isPathAbsolute(config.targetPath);
+    var targetPath = isPathAbsolute ? config.targetPath : path.resolve(config.targetPath);
 
     var res = madge(config.targetPath, {
       format : config.format,
@@ -96,6 +97,9 @@ module.exports = function(grunt) {
       "links" : links
     }
 
+    log.writeln("Converted data. Check.");
+    log.ok();
+
     return graph;
 
   };
@@ -113,8 +117,14 @@ module.exports = function(grunt) {
       graphData: JSON.stringify(graphData, null)
     })
 
-    var outputPath = path.join(config.outputPath, 'index.html');
+    var isPathAbsolute = grunt.file.isPathAbsolute(config.outputPath);
+    var baseOutputPath = isPathAbsolute ? config.outputPath : path.resolve(config.outputPath);
+
+    var outputPath = path.join(baseOutputPath, 'index.html');
     grunt.file.write(outputPath, html);
+
+    log.writeln("Generated graph into " + outputPath + " - Check.");
+    log.ok();
 
   }
 
