@@ -40,7 +40,8 @@ module.exports = function(grunt) {
 
     var madge = require('madge');
     var res = madge(config.targetPath, {
-      format : config.format
+      format : config.format,
+      exclude : config.exclude
     });
 
     log.writeln("Extracted dependencies. Check");
