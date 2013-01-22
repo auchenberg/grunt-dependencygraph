@@ -19,7 +19,7 @@ Then add some configuration for the plugin like so:
         dependencygraph: {
           targetPath: './app/assets/javascript',
           outputPath: './public/graph',
-          format: 'amd' // 'amd' or 'cjs'
+          format: 'amd'
         },
         ...
     });
@@ -42,7 +42,7 @@ grunt-dependencygraph supports a few options.
 ```text                 
 targetPath              Path for the target source to extract dependencies (supports absolute/relative paths)
 outputPath              Path for where to output the graph (supports absolute/relative paths)
-format                  Dependency-format to parse, either cjs (common-js), or amd
+format                  Dependency-format to parse, either 'cjs' (common-js), or 'amd' (AMD)
 exclude                 A regular expression for excluding modules
 ```
 
