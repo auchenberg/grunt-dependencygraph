@@ -84,7 +84,8 @@
     d3.select(window).on("resize", resize);
 
     // Load graph data
-    d3.json(url, onDataLoaded);
+    var graphData = window.getGraphData();
+    renderGraph(graphData);
 
     // Resize
     resize();
@@ -104,9 +105,7 @@
   }
 
 
-  function onDataLoaded(json) {
-
-    data = json;
+  function renderGraph(data) {
 
     // Lines
     links = graph.selectAll("line")

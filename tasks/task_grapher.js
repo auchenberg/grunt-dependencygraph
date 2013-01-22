@@ -21,10 +21,10 @@ module.exports = function(grunt) {
     var dependencies = findDependencies();
 
     // Convert data
-    generateGraphOutput(dependencies);
+    var graphData = generateGraphOutput(dependencies);
 
     // Template
-    writeHtml();
+    writeHtml(graphData);
 
     // Fail task if errors were logged
     if (grunt.errors) { return false; }
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
   function findDependencies() {
 
     var madge = require('madge');
-    var res = madge(config.path, {
+    var res = madge(config.targetPath, {
       format: config.format
     });
 
@@ -98,21 +98,21 @@ module.exports = function(grunt) {
       "links"       : links
     }
 
-    // Finished, write up
-    grunt.file.write(config.outputPath + dataFileName, JSON.stringify(graph, null, "\t") );
+    return graph;
 
   };
 
-  function writeHtml() {
+  function writeHtml(graphData) {
 
-    var template = grunt.file.read('lib/template.html');
-    var css = grunt.file.read('lib/style.css');
-    var js = grunt.file.read('lib/d3-graph.js');
+    var template = grunt.file.read(__dirname + '/lib/template.html');
+    var css = grunt.file.read(__dirname + '/lib/style.css');
+    var js = grunt.file.read(__dirname + '/lib/d3-graph.js');
 
     var html = grunt.template.process(template, {
       css : css,
       js  : js,
-      title: 'dependencyGraph.js'
+      title: 'dependencyGraph',
+      graphData: JSON.stringify(graphData, null)
     })
 
     grunt.file.write(config.outputPath + 'index.html', html);
