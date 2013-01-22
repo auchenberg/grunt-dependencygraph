@@ -31,6 +31,7 @@ Then add the following line to your Gruntfile **after** the initConfig-section:
 grunt.loadNpmTasks('grunt-dependencygraph');
 ```
 
-Then just run `grunt dependencygraph` and open `index.html`. in your `outputPath`-folder
+Then just run `grunt dependencygraph`, go to your `outputPath`-folder, and open `index.html`.
 
 Enjoy.
+
