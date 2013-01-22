@@ -111,7 +111,7 @@
     links = graph.selectAll("line")
       .data(data.links)
       .enter().append("line")
-      .attr("stroke-width","1")
+      .attr("stroke-width","1.5")
       .style("stroke", '#ccc');
 
       links.append("title").text(function(d) { return d.label });
