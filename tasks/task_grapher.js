@@ -9,6 +9,7 @@
 
 module.exports = function(grunt) {
 
+  var madge = require('madge');
   var path = require('path');
   var config = this.config.get('dependencygraph');
 
@@ -39,7 +40,6 @@ module.exports = function(grunt) {
 
   function findDependencies() {
 
-    var madge = require('madge');
     var res = madge(config.targetPath, {
       format : config.format,
       exclude : config.exclude
