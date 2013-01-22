@@ -9,6 +9,7 @@
 
 module.exports = function(grunt) {
 
+  var path = require('path');
   var config = this.config.get('dependencygraph');
 
   var _ = grunt.utils._;
@@ -112,7 +113,8 @@ module.exports = function(grunt) {
       graphData: JSON.stringify(graphData, null)
     })
 
-    grunt.file.write(config.outputPath + 'index.html', html);
+    var outputPath = path.join(config.outputPath, 'index.html');
+    grunt.file.write(outputPath, html);
 
   }
 
