@@ -12,8 +12,8 @@ module.exports = function(grunt) {
     },
 
     dependencygraph: {
-      path: '/Users/auchenberg/Development/example-multipage/www',
-      outputPath: './graph/',
+      targetPath: '/Users/auchenberg/Development/example-multipage/www',
+      outputPath: './graph',
       format: 'amd'
     }
 
