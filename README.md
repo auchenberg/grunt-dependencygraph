@@ -3,6 +3,25 @@ grunt-dependencygraph
 
 Visualize your CommonJS or AMD module dependencies in a force directed graph using D3.js.
 
+Introduction
+-------------
+
+You can read the full introduction to the project in my [blog post](http://blog.kenneth.io/blog/2013/01/23/visualize-your-javaScript-dependencies-with-grunt-dependencygraph/).
+
+Features
+-------------
+- Draw a graph of nodes, where each module is represented as a node. 
+- Google Maps's like zooming, dragging and panning.
+- Connect nodes with it's dependencies via lines.
+- Hovering a node will highlight it's direct dependencies.
+- It's possible to drag a node to a specific position, to re-layout the graph.
+
+Example
+-------
+The best way to show something is by example, so here I generated a dependencygraph of the offical [RequireJS multipage-example](https://github.com/requirejs/example-multipage)
+
+http://auchenberg.github.com/grunt-dependencygraph/example
+
 Installation
 -------------
 
@@ -53,6 +72,7 @@ grunt-dependencygraph is still very much in progress, so here is the todo-list:
 - Proper label positioning: Avoid label collisions and make the graph more readable.
 - Arrows on lines between nodes.
 - Better highlighting of dependencies when hovering nodes.
+- Testing! Unit tests of D3 render logic, and the grunt-task itself
 
 
 
