@@ -20,7 +20,7 @@ Example
 -------
 The best way to show something is by example, so here I generated a dependencygraph of the offical [RequireJS multipage-example](https://github.com/requirejs/example-multipage)
 
-![Example](https://raw.github.com/auchenberg/grunt-dependencygraph/master/example/graph_example.jpg)
+![Example](https://raw.github.com/auchenberg/grunt-dependencygraph/master/example/graph_example.png)
 
 http://auchenberg.github.com/grunt-dependencygraph/example
 
