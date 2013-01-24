@@ -20,7 +20,7 @@
     "dependencies",
     "graph",
     "visualize",
-    "D3"
+    "D3",
     "gruntplugin"
   ],
   "engines": [
