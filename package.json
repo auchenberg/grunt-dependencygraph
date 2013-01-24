@@ -21,6 +21,7 @@
     "graph",
     "visualize",
     "D3"
+    "gruntplugin"
   ],
   "engines": [
     "node >= 0.8.0"
