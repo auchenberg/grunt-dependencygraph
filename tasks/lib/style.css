@@ -1,5 +1,5 @@
   body {
-    background: #F6F6F6;
+    background: #fff;
     padding:0;
     margin:0;
     font-family:helvetica,arial;
@@ -21,28 +21,13 @@
   }
 
 
-  header {
-    background: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    border-bottom: 1px solid #E5E5E5;
   }
 
-  header h1 {
-    font-family: 'pt sans', arial, helvetica, sans-serif;
-    font-size: 42px;
-    font-weight: normal;
-    line-height: 120%;
-    color: #525252;
-    margin: 0;
   }
 
   .control-zoom {
     position: fixed;
-    top: 100px;
+    top: 10px;
     left: 10px;
     background: rgba(0, 0, 0, 0.25);
     padding: 5px;
