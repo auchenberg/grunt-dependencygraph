@@ -10,7 +10,7 @@ You can read the full introduction to the project in my [blog post](http://blog.
 
 Features
 -------------
-- Draw a graph of nodes, where each module is represented as a node. 
+- Draw a graph of nodes, where each module is represented as a node.
 - Google Maps's like zooming, dragging and panning.
 - Connect nodes with it's dependencies via lines.
 - Hovering a node will highlight it's direct dependencies.
@@ -60,21 +60,23 @@ Options
 -------
 grunt-dependencygraph supports a few options.
 
-```text                 
+```text
 targetPath              Path for the target source to extract dependencies (supports absolute/relative paths)
 outputPath              Path for where to output the graph (supports absolute/relative paths)
 format                  Dependency-format to parse, either 'cjs' (common-js), or 'amd' (AMD)
 exclude                 A regular expression for excluding modules
 ```
 
-TODO
+Roadmap
 -------
 grunt-dependencygraph is still very much in progress, so here is the todo-list:
 
 - Proper label positioning: Avoid label collisions and make the graph more readable.
-- Arrows on lines between nodes.
-- Better highlighting of dependencies when hovering nodes.
 - Testing! Unit tests of D3 render logic, and the grunt-task itself
+
+Inspiration
+-----------
+http://bl.ocks.org/1153292
 
 
 
