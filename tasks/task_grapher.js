@@ -13,7 +13,7 @@ module.exports = function(grunt) {
   var path = require('path');
   var config = this.config.get('dependencygraph');
 
-  var _ = grunt.utils._;
+  var _ = grunt.util._;
   var log = grunt.log;
 
   grunt.registerTask("dependencygraph", "Generate graph for CommonJS or AMD module dependencies.", function(prop) {
@@ -110,12 +110,14 @@ module.exports = function(grunt) {
     var css = grunt.file.read(__dirname + '/lib/style.css');
     var js = grunt.file.read(__dirname + '/lib/d3-graph.js');
 
-    var html = grunt.template.process(template, {
+	var values = {
       css : css,
       js : js,
       title : 'dependencyGraph',
       graphData: JSON.stringify(graphData, null)
-    })
+    }; 
+
+    var html = grunt.template.process(template, {data: values});
 
     var isPathAbsolute = grunt.file.isPathAbsolute(config.outputPath);
     var baseOutputPath = isPathAbsolute ? config.outputPath : path.resolve(config.outputPath);
