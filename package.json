@@ -30,7 +30,6 @@
     "madge": "0.1.4"
   },
   "devDependencies": {
-    "jshint": "0.9.1"
     "grunt": "~0.4.0"
   }
 }
